@@ -1,3 +1,4 @@
+/*
 var boutonTest = document.querySelector("#boutonTest");
 
 const couleur = () => {
@@ -5,3 +6,4 @@ const couleur = () => {
 };
 
 boutonTest.addEventListener("click", couleur);
+*/
