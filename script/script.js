@@ -18,10 +18,13 @@ const peuplerNombre = (e) => {
   affichage.textContent = nbAffiche;
 };
 
+/* Ajout des event listener */
 boutons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     if ((e.target.value >= 0 && e.target.value < 10) || e.target.value == ".") {
       peuplerNombre(e);
+    } else if (e.target.value == "clr") {
+      clear();
     } else {
       operation(e.target.value);
     }
@@ -69,12 +72,20 @@ const affichageEtAjustementValeur = (op) => {
 
 const diviser = (nb1, nb2, op) => {
   if (nb1 === 0) {
+    clear();
     affichage.textContent = "Division par zéro impossible";
-    // Appeler la fonction clear
     return;
   }
   total = parseFloat(nb2 / nb1);
   affichage.textContent = total;
   operateur = op;
   nbAffiche = 0;
+};
+
+const clear = () => {
+  nbAffiche = 0;
+  total = 0;
+  nombre1 = 0;
+  nombre2 = 0;
+  affichage.textContent = 0;
 };
