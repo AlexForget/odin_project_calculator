@@ -7,8 +7,20 @@ let nombre2 = 0;
 /* Querys */
 let boutons = document.querySelectorAll("button");
 let affichage = document.querySelector("#affichage label");
+let btnEgal = document.querySelector(".egal");
+
+const disableBtnEgal = () => {
+  btnEgal.disabled = true;
+};
+
+const enableBtnEgal = () => {
+  btnEgal.disabled = false;
+};
 
 /* Fonctions */
+
+// disableBtnEgal();
+
 const peuplerNombre = (e) => {
   if (nbAffiche === 0) {
     nbAffiche = e.target.value;
