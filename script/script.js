@@ -43,6 +43,10 @@ boutons.forEach((btn) => {
   });
 });
 
+const test = () => {
+  console.log("test");
+};
+
 const operation = (op) => {
   if (nombre1 !== 0) {
     nombre2 = nombre1;
